@@ -1,4 +1,3 @@
-import db from './src/connectDb.js';
 import express from 'express';
 import cors from 'cors';
 import { getAllPets, addPet } from './src/pets.js';

@@ -6,6 +6,7 @@ export function getAllPets(req, res){
     coll.get()
     .then(collection => {
         const pets = collection.docs.map(doc => ({ id: doc.id, ...doc.data}))
+        res.send(pets)
     })
     .catch(err => res.status(500).send({ message: err.message }))
 }
